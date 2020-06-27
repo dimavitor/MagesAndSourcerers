@@ -38,4 +38,11 @@ public class Movement : MonoBehaviour
         movementVertical = joystick.Vertical * speed;
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.name == "Stair")
+        {
+            MainSceneController.LoadLevel(1);        }
+    }
+
 }
